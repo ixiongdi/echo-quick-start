@@ -1,4 +1,4 @@
-FROM golang:1.7.4
+FROM golang
 
 MAINTAINER Di "di.xiong@i-md.com"
 
@@ -6,4 +6,4 @@ ADD . $GOPATH/src/app
 
 RUN go get app
 
-RUN CGO_ENABLED=0 go install -a app
+RUN go install -a app
